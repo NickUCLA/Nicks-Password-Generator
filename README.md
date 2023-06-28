@@ -1,7 +1,10 @@
-# Password Generator Application
+# Nick's Password Generator Application
 
 This is a simple password generator application that allows you to generate secure passwords based on selected criteria. You can specify the length of the password and choose from lowercase letters, uppercase letters, numeric characters, and special characters. The generated password is displayed in a text area for easy copying.
+
 ![Image of App](images/screencapture-127-0-0-1-5500-index-html-2023-06-28-14_46_42.png)
+
+[Application link](https://nickucla.github.io/Nicks-Password-Generator/)
 
 ## How to Use
 
@@ -38,5 +41,3 @@ To use the password generator application, simply open the `index.html` file in 
 
 - Please ensure that you select at least one criteria and enter a valid password length (between 8 and 128 characters) before generating a password.
 - The generated passwords are intended to be secure and random. However, always exercise caution and follow best practices for password management and security.
-
-Feel free to customize and modify the application according to your needs.
