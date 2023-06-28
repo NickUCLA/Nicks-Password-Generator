@@ -8,8 +8,11 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+  if (password == undefined) {
+    return (passwordText.value = "");
+  }
 }
-
+//generates password by randomly selecting one of the selected criterias, then uses a for loop to add a random character from the randomly selected criteria.
 function generatePassword() {
   var selectedCriteria = document.querySelectorAll(
     'input[name="criteria"]:checked'
@@ -29,6 +32,8 @@ function generatePassword() {
   var special = "!@#$%^&*()_+-=[]{}|;':\",./<>?";
   var allCharacters = "";
 
+  //This for loop adds the selected criteria to allCharacters
+
   for (let i = 0; i < selectedCriteria.length; i++) {
     if (selectedCriteria[i].defaultValue == "lowercase") {
       allCharacters += lowercase;
@@ -41,10 +46,7 @@ function generatePassword() {
     }
   }
 
-  //Need to randomly select a criteria and randomly select a character from that criteria for the length that is selected
-
-  var randomCriteria =
-    selectedCriteria[Math.floor(Math.random() * selectedCriteria.length)].value;
+  //Randomly selects from allCharacters to the length of the input
 
   for (let i = 0; i < passwordLength; i++) {
     password += allCharacters[Math.floor(Math.random() * allCharacters.length)];
